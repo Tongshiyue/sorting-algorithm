@@ -8,7 +8,7 @@ def inter(list):
             j -=1
         list[j+1] = temp
     return list
-
+#############直接插入###############################
 
 def maopao(list):
     count = len(list)
@@ -20,6 +20,7 @@ def maopao(list):
                 flog = 1
         while flog == 0:
             return list
+#############冒泡排序################################        
 def quick(list,left,right):
     if left>=right:
         return list
@@ -39,7 +40,7 @@ def quick(list,left,right):
     quick(list,left,i-1)
     quick(list,i+1,right)
     return list
-
+############快速排序##############################
 def xier(list):
     count = len(list)
     group = 2
@@ -58,7 +59,7 @@ def xier(list):
                 k += step
         step = int(step/2)
     return list
-
+############基数排序########################
 def select(list):
     count = len(list)
     for i in range(count):
@@ -70,7 +71,7 @@ def select(list):
                 num = j
         list[i],list[num] = list[num],list[i]
     return list
-
+#############选择排序#######################
 def adjuct_dui(list, i, size):
     lchild = 2*i+1
     rchild = 2*i+2
@@ -96,7 +97,7 @@ def dui(list):
         list[0],list[i]=list[i],list[0]
         adjuct_dui(list,0,i)
     return list
-
+#########堆排序#####################
 def splica(list):
     if len(list)<=1:
         return list
@@ -119,7 +120,7 @@ def merget(left,right):
     result+=left[i:]
     result+=right[j:]
     return result
-
+##########二路归并排序########################
 s = [2,1,8,3,6,5,0]
 m = [1,2,3,4,5]
 a = splica(s)
